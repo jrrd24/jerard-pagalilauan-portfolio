@@ -6,6 +6,7 @@ import eligibilityData from "@/data/EligibilityData";
 import { AchievementContainer } from "@/components/AchievementContainer";
 import projectsData from "@/data/ProjectsData";
 import { ProjectContainer } from "@/components/ProjectContainer";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Jerard Pagalilauan | Home",
@@ -35,7 +36,7 @@ export default function Home() {
         }}
       >
         <div className="hero-content flex-col lg:flex-row   text-center tracking-wide text-5xl font-bold text-main-dirty-white  items-center justify-items-center ">
-          <h1 className="">Hello I'm</h1>
+          <h1 className="">Hello I&apos;m</h1>
           <section className="animation text-2xl md:text-5xl">
             <div className="first">
               <h1>Jerard Pagalilauan</h1>
@@ -57,7 +58,7 @@ export default function Home() {
         <div className="hero-content flex-col lg:flex-row">
           <div className="avatar m-5">
             <div className="w-40 lg:w-60 rounded-xl">
-              <img src="/assets/profile_pic.jpg" />
+              <Image src="/assets/profile_pic.jpg" alt="profile" />
             </div>
           </div>
 

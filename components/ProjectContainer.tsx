@@ -1,3 +1,4 @@
+import Image from "next/image";
 import * as React from "react";
 
 type Tag = {
@@ -17,7 +18,7 @@ export function ProjectContainer(props: Card) {
       className={`card card-compact hover:bg-neutral hover:bg-opacity-5 transition-colors `}
     >
       {/**Image */}{" "}
-      <img
+      <Image
         src={props.image || "/assets/no_image.svg"}
         alt={props.title}
         className="object-cover h-full w-full aspect-video   rounded-3xl"

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import * as React from "react";
 import { FaTrophy } from "react-icons/fa6";
 
@@ -16,7 +17,7 @@ export function AchievementContainer(props: Card) {
     >
       {/**Image */}
       <figure className={`h-60 bg-gray-300 select-none`}>
-        <img
+        <Image
           src={props.image || "/assets/no_image.svg"}
           alt={props.title}
           className="object-cover"
