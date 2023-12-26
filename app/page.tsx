@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main
-      className="select-text  bg-primary "
+      className="select-text  bg-neutral "
       style={{
         backgroundImage: `
         radial-gradient(at 40% 20%, hsla(183,56%,51%,1) 0px, transparent 50%),
@@ -58,7 +58,13 @@ export default function Home() {
         <div className="hero-content flex-col lg:flex-row">
           <div className="avatar m-5">
             <div className="w-40 lg:w-60 rounded-xl">
-              <Image src="/assets/profile_pic.jpg" alt="profile" />
+              <Image
+                src="/assets/profile_pic.jpg"
+                alt="profile"
+                width="0"
+                height="0"
+                sizes="100vw"
+              />
             </div>
           </div>
 
@@ -153,7 +159,7 @@ export default function Home() {
           </h1>
 
           <div className=" flex items-center justify-center">
-            <div className="grid grid-cols-2 lg:grid-cols-7 md:grid-cols-4 sm:grid-cols-3  gap-y-8">
+            <div className="grid grid-cols-2 lg:grid-cols-7 md:grid-cols-4 sm:grid-cols-3  gap-y-8 gap-x-8 md:gap-x-0">
               {skillsData.map((data) => (
                 <SkillsContainer
                   key={data.id}
@@ -188,7 +194,7 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className="footer footer-center p-10  text-primary-content">
+      <footer className="footer footer-center p-10  text-base-100">
         <aside>
           <p className="font-bold">Jerard Pagalilauan</p>
           <p>Copyright © 2023 - All right reserved</p>

@@ -20,7 +20,10 @@ export function AchievementContainer(props: Card) {
         <Image
           src={props.image || "/assets/no_image.svg"}
           alt={props.title}
-          className="object-cover"
+          width="0"
+          height="0"
+          sizes="100vw"
+          className="object-cover w-auto h-auto"
         />
       </figure>
       <div className="card-body">

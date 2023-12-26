@@ -12,7 +12,6 @@ type Card = {
 };
 
 export function ProjectContainer(props: Card) {
-  console.log("PRP", props.tags);
   return (
     <div
       className={`card card-compact hover:bg-neutral hover:bg-opacity-5 transition-colors `}
@@ -21,7 +20,10 @@ export function ProjectContainer(props: Card) {
       <Image
         src={props.image || "/assets/no_image.svg"}
         alt={props.title}
-        className="object-cover h-full w-full aspect-video   rounded-3xl"
+        width="0"
+        height="0"
+        sizes="100vw"
+        className="w-full h-auto object-cover  aspect-video   rounded-3xl"
       />
       <div className="card-body">
         <div className="card-actions justify-end">

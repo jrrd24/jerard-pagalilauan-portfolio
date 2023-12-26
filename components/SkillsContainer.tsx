@@ -16,7 +16,7 @@ const SkillsContainer = (props: Skills) => {
           )}
         </figure>
       </div>
-      <div className="py-2 text-center opacity-0  group-hover:opacity-100  ">
+      <div className="py-2 text-center opacity-100 sm:opacity-0 group-hover:opacity-100  ">
         <h2 className="text-xl font-bold text-white">{props.title}</h2>
         <progress
           className="progress w-full progress-info"
