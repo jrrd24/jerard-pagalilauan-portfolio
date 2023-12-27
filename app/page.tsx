@@ -217,7 +217,7 @@ export default function Home() {
       >
         <aside className="items-center grid-flow-col">
           <p>
-            <b>Jerard Pagalilauan's</b> Web Portfolio
+            <b>Jerard Pagalilauan&apos;s</b> Web Portfolio
           </p>
         </aside>
 
