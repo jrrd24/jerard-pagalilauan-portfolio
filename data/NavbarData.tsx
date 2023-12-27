@@ -1,12 +1,11 @@
-import { TbHammer } from "react-icons/tb";
-import { MdHome } from "react-icons/md";
+import { TbHammer, TbLetterJ } from "react-icons/tb";
 import { GrContact } from "react-icons/gr";
 
 const navbarData = [
   {
-    Icon: MdHome,
-    title: "Home",
-    href: "/#hero",
+    Icon: TbLetterJ,
+    title: "Jerard",
+    href: "/#me",
   },
   {
     Icon: TbHammer,

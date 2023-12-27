@@ -12,6 +12,8 @@ import { FaFacebookF, FaGithub } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { BottomNav } from "@/components/BottomNav";
 import React from "react";
+import ProfilePic from "@/components/ProfilePic";
+import { MotionDiv } from "@/components/MotionDiv";
 
 export const metadata: Metadata = {
   title: "Jerard Pagalilauan | Home",
@@ -31,7 +33,6 @@ export default function Home() {
     >
       {/**HERO */}
       <section
-        id="hero"
         className="hero min-h-screen  items-center justify-items-center  bg-main-dark-blue   "
         style={{
           backgroundImage: `
@@ -60,33 +61,31 @@ export default function Home() {
       </section>
 
       {/**WHO AM I  */}
-      <section className="hero  min-h-screen  items-center justify-items-center  bg-base-100  text-main-dark-blue ">
+      <section
+        id="me"
+        className="hero  min-h-screen  items-center justify-items-center  bg-base-100  text-main-dark-blue "
+      >
         <div className="hero-content flex-col lg:flex-row">
-          <div className="avatar m-5">
-            <div className="w-40 lg:w-60 rounded-xl">
-              <Image
-                src="/assets/profile_pic.jpg"
-                alt="profile"
-                width="0"
-                height="0"
-                sizes="100vw"
-              />
+          <ProfilePic />
+          <MotionDiv
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ stiffness: 0, delay: 0.3 }}
+          >
+            <div className="max-w-lg  text-center lg:text-left">
+              <h1 className="mb-5 text-4xl lg:text-5xl font-bold tracking-normal  lg:tracking-wide snap-start">
+                Who Am I?
+              </h1>
+
+              <p className="mb-5 text-justify  ">
+                I am <b>Jerard Philiip P. Pagalilauan. </b>A hardworking and
+                passionate Bachelor of Science in Information Technology
+                undergraduate with minimal experience in developing web and
+                desktop apps, who’s dedicated in bringing creative and
+                functional web designs to life through programming.
+              </p>
             </div>
-          </div>
-
-          <div className="max-w-lg  text-center lg:text-left">
-            <h1 className="mb-5 text-4xl lg:text-5xl font-bold tracking-normal  lg:tracking-wide snap-start">
-              Who Am I?
-            </h1>
-
-            <p className="mb-5 text-justify  ">
-              I am <b>Jerard Philiip P. Pagalilauan. </b>A hardworking and
-              passionate Bachelor of Science in Information Technology
-              undergraduate with minimal experience in developing web and
-              desktop apps, who’s dedicated in bringing creative and functional
-              web designs to life through programming.
-            </p>
-          </div>
+          </MotionDiv>
         </div>
       </section>
 
@@ -114,6 +113,7 @@ export default function Home() {
                     />
                   </svg>
                 </div>
+
                 <div
                   className={`timeline-middle mb-10 ${
                     edu.id % 2 !== 0
@@ -127,6 +127,7 @@ export default function Home() {
                   </div>
                   University of Saint Louis Tuguegarao
                 </div>
+
                 <hr />
               </li>
             ))}
