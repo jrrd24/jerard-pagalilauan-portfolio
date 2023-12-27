@@ -1,5 +1,11 @@
 import { FaFigma, FaNodeJs, FaReact } from "react-icons/fa6";
-import { SiExpress, SiMui, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import {
+  SiCsharp,
+  SiExpress,
+  SiMui,
+  SiNextdotjs,
+  SiTailwindcss,
+} from "react-icons/si";
 
 const projectsData = [
   {
@@ -29,6 +35,13 @@ const projectsData = [
       { Icon: SiNextdotjs, title: "NextJS" },
       { Icon: SiTailwindcss, title: "Tailwind CSS" },
     ],
+  },
+
+  {
+    id: 4,
+    image: "/assets/projects/patient_mgmt.webp",
+    title: "Patient Management System",
+    tags: [{ Icon: SiCsharp, title: "C# (Windows Forms App)" }],
   },
 ];
 

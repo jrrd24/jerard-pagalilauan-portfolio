@@ -43,7 +43,7 @@ export default function Home() {
         }}
       >
         <div className="hero-content flex-col lg:flex-row   text-center tracking-wide text-5xl font-bold text-main-dirty-white  items-center justify-items-center ">
-          <h1 className="">Hello I&apos;m</h1>
+          <h1> Hello I&apos;m</h1>
           <section className="animation text-2xl md:text-5xl">
             <div className="first">
               <h1>Jerard Pagalilauan</h1>
@@ -63,7 +63,7 @@ export default function Home() {
       {/**WHO AM I  */}
       <section
         id="me"
-        className="hero  min-h-screen  items-center justify-items-center  bg-base-100  text-main-dark-blue "
+        className="hero  min-h-screen items-center justify-items-center  bg-base-100  text-main-dark-blue "
       >
         <div className="hero-content flex-col lg:flex-row">
           <ProfilePic />
@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
 
                 <div
-                  className={`timeline-middle mb-10 ${
+                  className={`timeline-middle mb-0 md:mb-10 ${
                     edu.id % 2 !== 0
                       ? "timeline-start  md:text-end "
                       : "timeline-end "
@@ -218,7 +218,7 @@ export default function Home() {
           </p>
         </aside>
 
-        <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+        <nav className="grid-flow-row md:grid-flow-col gap-0 md:gap-4 md:place-self-center md:justify-self-end items-center">
           <header className="footer-title">Contact Me</header>
           <div className="grid grid-flow-col gap-4">
             <a href="tel:+639663672973" target="_blank">
