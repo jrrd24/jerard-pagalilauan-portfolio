@@ -203,11 +203,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="flex items-center justify-center">
-        <div className="flex">
-          <BottomNav />
-        </div>
-      </div>
+      <BottomNav />
 
       <footer
         id="footer"

@@ -5,7 +5,7 @@ import React from "react";
 
 const ProfilePic = () => {
   const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 2], [0.7, 4.5]);
+  const scale = useTransform(scrollYProgress, [0, 2], [0.7, 3]);
 
   return (
     <motion.div style={{ scale }}>

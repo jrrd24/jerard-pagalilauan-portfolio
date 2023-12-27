@@ -6,7 +6,7 @@ export function BottomNav() {
   return (
     <div className="absolute w-full">
       <div className="btm-nav btm-nav-sm mb-5 bg-transparent">
-        <div className="grid justify-content-center grid-flow-col gap-6 max-w-60 backdrop-filter backdrop-blur-lg bg-neutral bg-opacity-60 text-white rounded-3xl">
+        <div className="grid justify-content-center grid-flow-col gap-4 max-w-60 backdrop-filter backdrop-blur-lg bg-neutral bg-opacity-60 text-white rounded-3xl">
           {navbarData.map((data) => (
             <Link key={data.title} href={data.href}>
               <div className="flex flex-col items-center link-hover">
