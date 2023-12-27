@@ -7,6 +7,11 @@ import { AchievementContainer } from "@/components/AchievementContainer";
 import projectsData from "@/data/ProjectsData";
 import { ProjectContainer } from "@/components/ProjectContainer";
 import Image from "next/image";
+import { MdMail } from "react-icons/md";
+import { FaFacebookF, FaGithub } from "react-icons/fa6";
+import { FaPhoneAlt } from "react-icons/fa";
+import { BottomNav } from "@/components/BottomNav";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Jerard Pagalilauan | Home",
@@ -15,7 +20,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main
-      className="select-text  bg-neutral "
+      className="select-text  bg-neutral scroll-smooth relative "
       style={{
         backgroundImage: `
         radial-gradient(at 40% 20%, hsla(183,56%,51%,1) 0px, transparent 50%),
@@ -25,8 +30,9 @@ export default function Home() {
       }}
     >
       {/**HERO */}
-      <div
-        className="hero min-h-screen  items-center justify-items-center  bg-main-dark-blue "
+      <section
+        id="hero"
+        className="hero min-h-screen  items-center justify-items-center  bg-main-dark-blue   "
         style={{
           backgroundImage: `
         radial-gradient(at 40% 20%, hsla(183,56%,51%,1) 0px, transparent 50%),
@@ -51,10 +57,10 @@ export default function Home() {
             </div>
           </section>
         </div>
-      </div>
+      </section>
 
       {/**WHO AM I  */}
-      <div className="hero min-h-screen  items-center justify-items-center  bg-base-100  text-main-dark-blue">
+      <section className="hero  min-h-screen  items-center justify-items-center  bg-base-100  text-main-dark-blue ">
         <div className="hero-content flex-col lg:flex-row">
           <div className="avatar m-5">
             <div className="w-40 lg:w-60 rounded-xl">
@@ -69,7 +75,7 @@ export default function Home() {
           </div>
 
           <div className="max-w-lg  text-center lg:text-left">
-            <h1 className="mb-5 text-4xl lg:text-5xl font-bold tracking-normal  lg:tracking-wide ">
+            <h1 className="mb-5 text-4xl lg:text-5xl font-bold tracking-normal  lg:tracking-wide snap-start">
               Who Am I?
             </h1>
 
@@ -82,10 +88,10 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/**Educ */}
-      <div className="hero min-h-screen   items-center justify-items-center   text-main-dirty-white   bg-main-dark-blue">
+      <section className="hero  min-h-screen   items-center justify-items-center   text-main-dirty-white   bg-main-dark-blue ">
         <div className="max-w-2xl p-5">
           <h1 className="my-8 text-4xl  font-bold tracking-normal  lg:tracking-wide text-center  ">
             Education 📑
@@ -126,10 +132,10 @@ export default function Home() {
             ))}
           </ul>
         </div>
-      </div>
+      </section>
 
       {/**Eligibility and Awards  */}
-      <div className="hero min-h-screen  items-center justify-items-center  bg-base-100   text-main-dark-blue">
+      <section className="hero  min-h-screen  items-center justify-items-center  bg-base-100   text-main-dark-blue ">
         {" "}
         <div className="max-w-7xl p-5 my-5 lg:my-10">
           <h1 className="my-8 text-4xl  font-bold tracking-normal  lg:tracking-wide text-center pb-5">
@@ -149,17 +155,17 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/**Skills */}
-      <div className="hero min-h-screen items-center justify-items-center  text-main-dirty-white   bg-main-dark-blue py-20  px-5">
+      <section className="hero   min-h-screen items-center justify-items-center  text-main-dirty-white   bg-main-dark-blue py-20  px-5">
         <div className="max-w-7xl py-y">
           <h1 className="pb-16 text-4xl  font-bold tracking-normal  lg:tracking-wide text-center ">
             My Tech Skills 🎯
           </h1>
 
           <div className=" flex items-center justify-center">
-            <div className="grid grid-cols-2 lg:grid-cols-7 md:grid-cols-4 sm:grid-cols-3  gap-y-8 gap-x-8 md:gap-x-0">
+            <div className="grid grid-cols-2 lg:grid-cols-7 md:grid-cols-4 sm:grid-cols-3  gap-8">
               {skillsData.map((data) => (
                 <SkillsContainer
                   key={data.id}
@@ -171,11 +177,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/**My Projects  */}
-      <div className="hero min-h-screen items-center justify-items-center  bg-main-dirty-white   text-main-dark-blue">
-        {" "}
+      <section
+        id="projects"
+        className="hero min-h-screen items-center justify-items-center  bg-main-dirty-white   text-main-dark-blue "
+      >
         <div className="max-w-7xl p-5 my-5 lg:my-10">
           <h1 className="my-8 text-4xl  font-bold tracking-normal  lg:tracking-wide text-center pb-5">
             My Projects ⚒️
@@ -192,13 +200,44 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section>
+
+      <div className="flex items-center justify-center">
+        <div className="flex">
+          <BottomNav />
+        </div>
       </div>
 
-      <footer className="footer footer-center p-10  text-base-100">
-        <aside>
-          <p className="font-bold">Jerard Pagalilauan</p>
-          <p>Copyright © 2023 - All right reserved</p>
+      <footer
+        id="footer"
+        className=" absolute footer items-center p-4 min-h-20 text-main-dirty-white z-10 md:z-0"
+        style={{
+          background: "linear-gradient(to right, #FC5185, #364F6B)",
+        }}
+      >
+        <aside className="items-center grid-flow-col">
+          <p>
+            <b>Jerard Pagalilauan's</b> Web Portfolio
+          </p>
         </aside>
+
+        <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+          <header className="footer-title">Contact Me</header>
+          <div className="grid grid-flow-col gap-4">
+            <a href="tel:+639663672973" target="_blank">
+              <FaPhoneAlt className="w-6 h-6" />
+            </a>
+            <a href="mailto:jerardpagalilauan@gmail.com" target="_blank">
+              <MdMail className="w-6 h-6" />
+            </a>
+            <a href="https://www.facebook.com/Jrrdprz" target="_blank">
+              <FaFacebookF className="w-6 h-6" />
+            </a>
+            <a href="https://github.com/jrrd24" target="_blank">
+              <FaGithub className="w-6 h-6" />
+            </a>
+          </div>
+        </nav>
       </footer>
     </main>
   );
