@@ -28,7 +28,7 @@ const eligibilityData = [
   
     {
       id: 4,
-      title: "Philippine Civil Service Enamination Passer",
+      title: "Philippine Civil Service Examination Passer",
       startYear: 2023,
       endYear: 2023,
       image: "",
