@@ -124,6 +124,5 @@ const skillsData = [
     proficiencyPercent: 50,
   },
 ];
-skillsData.sort((a, b) => b.proficiencyPercent - a.proficiencyPercent);
 
 export default skillsData;

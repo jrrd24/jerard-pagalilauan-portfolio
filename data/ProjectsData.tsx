@@ -13,10 +13,10 @@ const projectsData = [
     image: "/assets/projects/lokal_360.webp",
     title: "Lokal 360: An Online E-Commerce Platform for Local Businesses ",
     tags: [
-      { Icon: FaReact, title: "ReactJS" },
-      { Icon: FaNodeJs, title: "NodeJS" },
-      { Icon: SiExpress, title: "ExpressJS" },
-      { Icon: SiMui, title: "Material UI" },
+      { id: 1, Icon: FaReact, title: "ReactJS" },
+      { id: 2, Icon: FaNodeJs, title: "NodeJS" },
+      { id: 3, Icon: SiExpress, title: "ExpressJS" },
+      { id: 4, Icon: SiMui, title: "Material UI" },
     ],
   },
 
@@ -24,7 +24,7 @@ const projectsData = [
     id: 2,
     image: "/assets/projects/lokal_360_figma.webp",
     title: "Lokal 360 (Mobile and Web Figma Design)",
-    tags: [{ Icon: FaFigma, title: "Figma" }],
+    tags: [{ id: 1, Icon: FaFigma, title: "Figma" }],
   },
 
   {
@@ -32,8 +32,8 @@ const projectsData = [
     image: "/assets/projects/web_portfolio.webp",
     title: "Personal Web Resume",
     tags: [
-      { Icon: SiNextdotjs, title: "NextJS" },
-      { Icon: SiTailwindcss, title: "Tailwind CSS" },
+      { id: 1, Icon: SiNextdotjs, title: "NextJS" },
+      { id: 2, Icon: SiTailwindcss, title: "Tailwind CSS" },
     ],
   },
 
@@ -41,7 +41,7 @@ const projectsData = [
     id: 4,
     image: "/assets/projects/patient_mgmt.webp",
     title: "Patient Management System",
-    tags: [{ Icon: SiCsharp, title: "C# (Windows Forms App)" }],
+    tags: [{ id: 1, Icon: SiCsharp, title: "C# (Windows Forms App)" }],
   },
 ];
 
