@@ -5,7 +5,6 @@ type Skills = {
   id: number;
   Icon: React.ElementType;
   title: string;
-  proficiencyPercent: number;
 };
 
 const SkillsContainer = (props: Skills) => {

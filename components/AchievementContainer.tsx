@@ -2,6 +2,7 @@ import Image from "next/image";
 import * as React from "react";
 import { FaTrophy } from "react-icons/fa6";
 import { MotionDiv } from "./client/MotionDiv";
+import AchivementContainerImage from "./client/AchivementContainerImage";
 
 type Card = {
   image: string;
@@ -29,16 +30,21 @@ export function AchievementContainer(props: Card) {
         className={`card card-compact hover:bg-neutral hover:bg-opacity-5 transition-colors `}
       >
         {/**Image */}
-        <figure className={`h-60 bg-gray-300 select-none`}>
-          <Image
-            src={props.image || "/assets/no_image.svg"}
-            alt={props.title}
-            width="0"
-            height="0"
-            sizes="100vw"
-            className="object-cover w-auto h-auto"
-          />
-        </figure>
+        {props.image === "" ? (
+          <figure className={`bg-gray-300 select-none h-60  rounded-2xl `}>
+            <Image
+              src={"/assets/no_image.svg"}
+              alt={props.title}
+              width="0"
+              height="0"
+              sizes="100vw"
+              className="object-cover w-auto h-auto"
+            />
+          </figure>
+        ) : (
+          <AchivementContainerImage image={props.image} title={props.title} />
+        )}
+
         <div className="card-body">
           <MotionDiv
             initial={{ opacity: 0, y: "15%" }}

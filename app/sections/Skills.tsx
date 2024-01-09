@@ -20,7 +20,6 @@ const Skills = (props: Props) => {
                 id={data.id}
                 Icon={data.Icon}
                 title={data.title}
-                proficiencyPercent={data.proficiencyPercent}
               />
             ))}
           </div>
