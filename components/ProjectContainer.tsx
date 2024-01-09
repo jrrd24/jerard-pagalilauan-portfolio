@@ -33,7 +33,7 @@ export function ProjectContainer(props: Card) {
         <ProjectButton image={props.image} title={props.title} id={props.id} />
         <div className="card-body">
           <div className="card-actions justify-end">
-            {props.tags.map((data) => (
+            {props?.tags?.map((data) => (
               <MotionDiv
                 key={data.title}
                 initial={{ opacity: 0, y: "50%" }}

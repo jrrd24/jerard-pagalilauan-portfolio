@@ -1,4 +1,5 @@
 import { FaFigma, FaNodeJs, FaReact } from "react-icons/fa6";
+import { GrMysql } from "react-icons/gr";
 import {
   SiCsharp,
   SiExpress,
@@ -6,6 +7,8 @@ import {
   SiNextdotjs,
   SiTailwindcss,
 } from "react-icons/si";
+import { DiDotnet } from "react-icons/di";
+import { GiDaisy } from "react-icons/gi";
 
 const projectsData = [
   {
@@ -17,6 +20,7 @@ const projectsData = [
       { id: 2, Icon: FaNodeJs, title: "NodeJS" },
       { id: 3, Icon: SiExpress, title: "ExpressJS" },
       { id: 4, Icon: SiMui, title: "Material UI" },
+      { id: 5, Icon: GrMysql, title: "My SQL" },
     ],
   },
 
@@ -34,6 +38,7 @@ const projectsData = [
     tags: [
       { id: 1, Icon: SiNextdotjs, title: "NextJS" },
       { id: 2, Icon: SiTailwindcss, title: "Tailwind CSS" },
+      { id: 3, Icon: GiDaisy, title: "Daisy UI" },
     ],
   },
 
@@ -41,7 +46,11 @@ const projectsData = [
     id: 4,
     image: "/assets/projects/patient_mgmt.webp",
     title: "Patient Management System",
-    tags: [{ id: 1, Icon: SiCsharp, title: "C# (Windows Forms App)" }],
+    tags: [
+      { id: 1, Icon: SiCsharp, title: "C# (Windows Forms App)" },
+      { id: 2, Icon: DiDotnet, title: ".NET Framework" },
+      { id: 3, Icon: GrMysql, title: "My SQL" },
+    ],
   },
 ];
 

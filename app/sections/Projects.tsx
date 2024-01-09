@@ -22,7 +22,7 @@ const Projects = (props: Props) => {
               id={data.id}
               image={data.image}
               title={data.title}
-              tags={data.tags}
+              tags={data?.tags}
             />
           ))}
         </div>
